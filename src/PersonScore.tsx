@@ -1,5 +1,6 @@
 import { useEffect, useReducer, useRef, useMemo } from "react";
 import { getPerson } from "./getPerson";
+import { Reset } from "./Reset";
 
 function sillyExpensiveFunction() {
   console.log("Executing silly function");
@@ -85,7 +86,7 @@ export function PersonScore() {
         Add
       </button>
       <button onClick={() => dispatch({ type: "decrement" })}>Subtract</button>
-      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+      <Reset onClick={() => dispatch({ type: "reset" })} />
     </div>
   );
 }
